@@ -489,69 +489,149 @@ export default function App() {
           </div>
         ))}
       </div>
- {/* MOTIVATION SECTION */}
+{/* SAKRA SPIRIT SECTION */}
 <div
   style={{
     marginTop: "60px",
-    background: "#151515",
+    background: "#111",
     border: "1px solid #222",
     borderRadius: "30px",
-    padding: "35px",
+    padding: "40px",
+    boxShadow: "0 0 40px rgba(0,0,0,0.4)",
   }}
 >
   <h1
     style={{
-      fontSize: "42px",
-      marginBottom: "20px",
+      fontSize: "56px",
+      fontWeight: "900",
       color: "#fff",
       textAlign: "center",
+      marginBottom: "40px",
+      letterSpacing: "2px",
     }}
   >
-    REAL PRODUCT ⚔️
+    SAKRA SPIRIT ⚔️
   </h1>
-
-  <p
-    style={{
-      color: "#ccc",
-      lineHeight: "1.8",
-      fontSize: "18px",
-      marginBottom: "30px",
-      textAlign: "center",
-    }}
-  >
-    jadi next step jangan asal tambah fitur random.
-  </p>
 
   <div
     style={{
       display: "grid",
-      gap: "20px",
-      marginTop: "30px",
+      gap: "22px",
     }}
   >
     {[
-      "⏰ Daily Reset System",
-      "➕ Add Custom Habit",
-      "⚡ Progress Level Bar",
-      "📱 Mobile App Feel",
-      "🏠 Add To Home Screen",
-      "🎨 Dark Art Branding",
+      {
+        icon: "⏰",
+        title: "Daily Reset System",
+        desc: "Reset harian untuk menjaga konsistensi.",
+        glow: "#ff4d4d",
+      },
+      {
+        icon: "➕",
+        title: "Add Custom Habit",
+        desc: "Buat habit sesuai versi terbaik dirimu.",
+        glow: "#a855f7",
+      },
+      {
+        icon: "⚡",
+        title: "Progress Level Bar",
+        desc: "Lihat perkembangan, naik level setiap hari.",
+        glow: "#facc15",
+      },
+      {
+        icon: "📱",
+        title: "Mobile App Feel",
+        desc: "Pengalaman se smooth aplikasi native.",
+        glow: "#38bdf8",
+      },
+      {
+        icon: "🏠",
+        title: "Add To Home Screen",
+        desc: "Akses lebih cepat, fokus tanpa distraksi.",
+        glow: "#4ade80",
+      },
+      {
+        icon: "🎨",
+        title: "Dark Art Branding",
+        desc: "Identitas visual yang kuat dan berkarakter.",
+        glow: "#fb923c",
+      },
     ].map((item, index) => (
-      <div
+      <button
         key={index}
         style={{
-          background: "#0f0f0f",
+          width: "100%",
+          background: "#0c0c0c",
           border: "1px solid #222",
-          padding: "20px",
-          borderRadius: "18px",
-          fontSize: "18px",
-          fontWeight: "bold",
+          borderLeft: `4px solid ${item.glow}`,
+          borderRadius: "24px",
+          padding: "28px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          cursor: "pointer",
+          transition: "0.25s",
           color: "#fff",
-          textAlign: "center",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "scale(1.01)";
+          e.currentTarget.style.boxShadow = `0 0 25px ${item.glow}55`;
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "scale(1)";
+          e.currentTarget.style.boxShadow = "none";
         }}
       >
-        {item}
-      </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "22px",
+          }}
+        >
+          <div
+            style={{
+              fontSize: "42px",
+            }}
+          >
+            {item.icon}
+          </div>
+
+          <div
+            style={{
+              textAlign: "left",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "32px",
+                fontWeight: "800",
+                marginBottom: "8px",
+              }}
+            >
+              {item.title}
+            </div>
+
+            <div
+              style={{
+                color: "#999",
+                fontSize: "18px",
+              }}
+            >
+              {item.desc}
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            fontSize: "42px",
+            color: "#666",
+          }}
+        >
+          ›
+        </div>
+      </button>
     ))}
   </div>
 </div>
