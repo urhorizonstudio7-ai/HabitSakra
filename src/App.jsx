@@ -667,6 +667,68 @@ useEffect(() => {
     ))}
   </div>
 </div>
+{/* HISTORY CALENDAR */}
+<div
+  style={{
+    marginTop: "50px",
+    background: "#111",
+    border: "1px solid #222",
+    borderRadius: "30px",
+    padding: "30px",
+  }}
+>
+  <h2
+    style={{
+      color: "#fff",
+      marginBottom: "25px",
+      fontSize: "32px",
+      fontWeight: "800",
+    }}
+  >
+    HISTORY HEATMAP 📅🔥
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(7, 1fr)",
+      gap: "10px",
+    }}
+  >
+    {Array.from({ length: 30 }).map((_, index) => {
+      const date = new Date();
+
+      date.setDate(date.getDate() - index);
+
+      const formatted = date
+        .toISOString()
+        .split("T")[0];
+
+      const active = history[formatted];
+
+      return (
+        <div
+          key={index}
+          title={formatted}
+          style={{
+            aspectRatio: "1",
+            borderRadius: "10px",
+            background: active
+              ? "#9FE870"
+              : "#1b1b1b",
+            border: active
+              ? "1px solid #9FE870"
+              : "1px solid #222",
+            boxShadow: active
+              ? "0 0 15px rgba(159,232,112,0.5)"
+              : "none",
+            transition: "0.2s",
+          }}
+        />
+      );
+    })}
+  </div>
+</div>
 </div>
 );
 }
