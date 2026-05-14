@@ -489,6 +489,103 @@ export default function App() {
           </div>
         ))}
       </div>
+      {/* MOTIVATION SECTION */}
+<div
+  style={{
+    marginTop: "60px",
+    background: "#151515",
+    border: "1px solid #222",
+    borderRadius: "30px",
+    padding: "35px",
+  }}
+>
+  <h1
+    style={{
+      fontSize: "42px",
+      marginBottom: "20px",
+    }}
+  >
+    REAL PRODUCT ⚔️
+  </h1>
+
+  <p
+    style={{
+      color: "#999",
+      lineHeight: "1.8",
+      fontSize: "18px",
+      marginBottom: "20px",
+    }}
+  >
+    jadi next step jangan asal tambah fitur random.
+  </p>
+
+  <p
+    style={{
+      color: "#999",
+      lineHeight: "1.8",
+      fontSize: "18px",
+      marginBottom: "35px",
+    }}
+  >
+    fokus:
+  </p>
+
+  <h2
+    style={{
+      fontSize: "48px",
+      lineHeight: "1.3",
+      marginBottom: "40px",
+    }}
+  >
+    bikin orang ketagihan buka tiap hari 😎
+  </h2>
+
+  <hr
+    style={{
+      border: "1px solid #222",
+      marginBottom: "40px",
+    }}
+  />
+
+  <h2
+    style={{
+      fontSize: "38px",
+      marginBottom: "30px",
+    }}
+  >
+    PRIORITAS TERBAIK SEKARANG 🔥
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gap: "20px",
+    }}
+  >
+    {[
+      "⏰ Daily Reset System",
+      "➕ Add Custom Habit",
+      "⚡ Progress Level Bar",
+      "📱 Mobile App Feel",
+      "🏠 Add To Home Screen",
+      "🎨 Dark Art Branding",
+    ].map((item, index) => (
+      <div
+        key={index}
+        style={{
+          background: "#0f0f0f",
+          border: "1px solid #222",
+          padding: "20px",
+          borderRadius: "18px",
+          fontSize: "18px",
+          fontWeight: "bold",
+        }}
+      >
+        {item}
+      </div>
+    ))}
+  </div>
+</div>
     </div>
   );
 }
