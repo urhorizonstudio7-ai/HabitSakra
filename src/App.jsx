@@ -513,17 +513,6 @@ export default function App() {
       color: "#999",
       lineHeight: "1.8",
       fontSize: "18px",
-      marginBottom: "20px",
-    }}
-  >
-    jadi next step jangan asal tambah fitur random.
-  </p>
-
-  <p
-    style={{
-      color: "#999",
-      lineHeight: "1.8",
-      fontSize: "18px",
       marginBottom: "35px",
     }}
   >
