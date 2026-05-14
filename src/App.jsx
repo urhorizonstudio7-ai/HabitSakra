@@ -504,6 +504,7 @@ export default function App() {
       fontSize: "42px",
       marginBottom: "20px",
       color: "#fff",
+      textAlign: "center",
     }}
   >
     REAL PRODUCT ⚔️
@@ -514,7 +515,8 @@ export default function App() {
       color: "#ccc",
       lineHeight: "1.8",
       fontSize: "18px",
-      marginBottom: "20px",
+      marginBottom: "30px",
+      textAlign: "center",
     }}
   >
     jadi next step jangan asal tambah fitur random.
@@ -545,10 +547,14 @@ export default function App() {
           fontSize: "18px",
           fontWeight: "bold",
           color: "#fff",
+          textAlign: "center",
         }}
       >
         {item}
       </div>
     ))}
+  </div>
+</div>
+</div>
 );
 }
