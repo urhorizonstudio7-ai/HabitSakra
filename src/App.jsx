@@ -550,7 +550,5 @@ export default function App() {
         {item}
       </div>
     ))}
-  </div>
-</div>
 );
 }
