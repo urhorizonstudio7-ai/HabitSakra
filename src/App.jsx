@@ -707,28 +707,34 @@ useEffect(() => {
       const active = history[formatted];
 
       return (
-        <div
-          key={index}
-          title={formatted}
-          style={{
-            aspectRatio: "1",
-            borderRadius: "10px",
-            background: active
-              ? "#9FE870"
-              : "#1b1b1b",
-            border: active
-              ? "1px solid #9FE870"
-              : "1px solid #222",
-            boxShadow: active
-              ? "0 0 15px rgba(159,232,112,0.5)"
-              : "none",
-            transition: "0.2s",
-          }}
-        />
-      );
-    })}
+  <div
+    key={index}
+    title={formatted}
+    style={{
+      aspectRatio: "1",
+      borderRadius: "10px",
+      background: active
+        ? "#9FE870"
+        : "#1b1b1b",
+      border: active
+        ? "1px solid #9FE870"
+        : "1px solid #222",
+      boxShadow: active
+        ? "0 0 15px rgba(159,232,112,0.5)"
+        : "none",
+      transition: "0.2s",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: active ? "#111" : "#666",
+      fontSize: "12px",
+      fontWeight: "bold",
+    }}
+  >
+        {date.getDate()}
   </div>
-</div>
-</div>
 );
-}
+}))}
+
+</div>
+</div>
