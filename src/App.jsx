@@ -193,26 +193,7 @@ useEffect(() => {
   };
 
   // COMPLETE HABIT
- const completeHabit = (index) => {
-  const updatedHabits = [...habits];
 
-  if (!updatedHabits[index].completed) {
-    updatedHabits[index].completed = true;
-    updatedHabits[index].xp += 25;
-    updatedHabits[index].streak += 1;
-
-    setTotalXP(totalXP + 25);
-    setTotalStreak(totalStreak + 1);
-
-    setHabits(updatedHabits);
-
-    // SAVE HISTORY
-    setHistory((prev) => ({
-      ...prev,
-      [today]: true,
-    }));
-  }
-};
   // REALTIME DATE & TIME
   const currentDate = new Date();
 
