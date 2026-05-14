@@ -489,7 +489,7 @@ export default function App() {
           </div>
         ))}
       </div>
-      {/* MOTIVATION SECTION */}
+ {/* MOTIVATION SECTION */}
 <div
   style={{
     marginTop: "60px",
@@ -503,6 +503,7 @@ export default function App() {
     style={{
       fontSize: "42px",
       marginBottom: "20px",
+      color: "#fff",
     }}
   >
     REAL PRODUCT ⚔️
@@ -510,27 +511,20 @@ export default function App() {
 
   <p
     style={{
-      color: "#999",
+      color: "#ccc",
       lineHeight: "1.8",
       fontSize: "18px",
-      marginBottom: "35px",
+      marginBottom: "20px",
     }}
   >
-    fokus:
+    jadi next step jangan asal tambah fitur random.
   </p>
-
-  <hr
-    style={{
-      border: "1px solid #222",
-      marginBottom: "40px",
-    }}
-  />
-
 
   <div
     style={{
       display: "grid",
       gap: "20px",
+      marginTop: "30px",
     }}
   >
     {[
@@ -550,6 +544,7 @@ export default function App() {
           borderRadius: "18px",
           fontSize: "18px",
           fontWeight: "bold",
+          color: "#fff",
         }}
       >
         {item}
