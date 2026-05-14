@@ -530,16 +530,6 @@ export default function App() {
     fokus:
   </p>
 
-  <h2
-    style={{
-      fontSize: "48px",
-      lineHeight: "1.3",
-      marginBottom: "40px",
-    }}
-  >
-    bikin orang ketagihan buka tiap hari 😎
-  </h2>
-
   <hr
     style={{
       border: "1px solid #222",
@@ -547,14 +537,6 @@ export default function App() {
     }}
   />
 
-  <h2
-    style={{
-      fontSize: "38px",
-      marginBottom: "30px",
-    }}
-  >
-    PRIORITAS TERBAIK SEKARANG 🔥
-  </h2>
 
   <div
     style={{
