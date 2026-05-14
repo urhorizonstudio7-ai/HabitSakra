@@ -14,6 +14,52 @@ export default function App() {
 
   // AUTO LEVEL SYSTEM
   const level = Math.floor(totalXP / 100) + 1;
+// HISTORY SYSTEM
+const [history, setHistory] = useState({});
+
+// TODAY DATE
+const today = new Date().toISOString().split("T")[0];
+
+// SAVE HISTORY WHEN COMPLETE
+const completeHabit = (index) => {
+  const updatedHabits = [...habits];
+
+  if (!updatedHabits[index].completed) {
+    updatedHabits[index].completed = true;
+    updatedHabits[index].xp += 25;
+    updatedHabits[index].streak += 1;
+
+    setTotalXP(totalXP + 25);
+    setTotalStreak(totalStreak + 1);
+
+    setHabits(updatedHabits);
+
+    // SAVE TODAY HISTORY
+    setHistory((prev) => ({
+      ...prev,
+      [today]: true,
+    }));
+  }
+};
+
+// LOAD HISTORY
+useEffect(() => {
+  const savedHistory = localStorage.getItem(
+    "habitsakra-history"
+  );
+
+  if (savedHistory) {
+    setHistory(JSON.parse(savedHistory));
+  }
+}, []);
+
+// SAVE HISTORY
+useEffect(() => {
+  localStorage.setItem(
+    "habitsakra-history",
+    JSON.stringify(history)
+  );
+}, [history]); 
 
   // HABITS
   const [habits, setHabits] = useState([
@@ -147,21 +193,26 @@ export default function App() {
   };
 
   // COMPLETE HABIT
-  const completeHabit = (index) => {
-    const updatedHabits = [...habits];
+ const completeHabit = (index) => {
+  const updatedHabits = [...habits];
 
-    if (!updatedHabits[index].completed) {
-      updatedHabits[index].completed = true;
-      updatedHabits[index].xp += 25;
-      updatedHabits[index].streak += 1;
+  if (!updatedHabits[index].completed) {
+    updatedHabits[index].completed = true;
+    updatedHabits[index].xp += 25;
+    updatedHabits[index].streak += 1;
 
-      setTotalXP(totalXP + 25);
-      setTotalStreak(totalStreak + 1);
+    setTotalXP(totalXP + 25);
+    setTotalStreak(totalStreak + 1);
 
-      setHabits(updatedHabits);
-    }
-  };
+    setHabits(updatedHabits);
 
+    // SAVE HISTORY
+    setHistory((prev) => ({
+      ...prev,
+      [today]: true,
+    }));
+  }
+};
   // REALTIME DATE & TIME
   const currentDate = new Date();
 
